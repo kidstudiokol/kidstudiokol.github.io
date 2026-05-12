@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Privacy Policy — KidLearn</title>
+  <meta name="description" content="KidLearn Privacy Policy — how we protect your child's data." />
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: #1A1A2E;
+      color: #fff;
+      min-height: 100vh;
+    }
+
+    /* NAV */
+    nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 20px 40px;
+      background: rgba(255,255,255,0.04);
+      backdrop-filter: blur(8px);
+      position: sticky;
+      top: 0;
+      z-index: 100;
+    }
+    .nav-logo {
+      font-size: 1.5rem;
+      font-weight: 800;
+      color: #E94560;
+      letter-spacing: 1px;
+      text-decoration: none;
+    }
+    .nav-back {
+      background: rgba(255,255,255,0.08);
+      color: #ccc;
+      padding: 8px 20px;
+      border-radius: 24px;
+      font-weight: 600;
+      font-size: 0.9rem;
+      text-decoration: none;
+      transition: background 0.15s;
+    }
+    .nav-back:hover { background: rgba(255,255,255,0.14); }
+
+    /* HERO BANNER */
+    .policy-hero {
+      background: radial-gradient(ellipse at 50% 0%, #533483 0%, #1A1A2E 65%);
+      text-align: center;
+      padding: 60px 24px 48px;
+    }
+    .policy-hero .shield { font-size: 3.5rem; display: block; margin-bottom: 14px; }
+    .policy-hero h1 { font-size: 2.2rem; font-weight: 900; margin-bottom: 8px; }
+    .policy-hero h1 span { color: #E94560; }
+    .policy-hero .updated {
+      font-size: 0.85rem;
+      color: #888;
+      margin-top: 8px;
+    }
+
+    /* CONTENT */
+    .content {
+      max-width: 780px;
+      margin: 0 auto;
+      padding: 48px 24px 80px;
+    }
+
+    .section-block {
+      background: rgba(255,255,255,0.04);
+      border: 1px solid rgba(255,255,255,0.07);
+      border-radius: 18px;
+      padding: 28px 28px;
+      margin-bottom: 20px;
+    }
+
+    .section-block h2 {
+      font-size: 1.05rem;
+      font-weight: 800;
+      color: #E94560;
+      margin-bottom: 14px;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+    .section-block h2 .num {
+      background: #E94560;
+      color: #fff;
+      width: 26px;
+      height: 26px;
+      border-radius: 50%;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 0.8rem;
+      font-weight: 900;
+      flex-shrink: 0;
+    }
+
+    .section-block p {
+      font-size: 0.925rem;
+      color: #CCCCCC;
+      line-height: 1.75;
+      margin-bottom: 10px;
+    }
+    .section-block p:last-child { margin-bottom: 0; }
+
+    .section-block ul {
+      list-style: none;
+      padding: 0;
+    }
+    .section-block ul li {
+      font-size: 0.925rem;
+      color: #CCCCCC;
+      line-height: 1.7;
+      padding: 6px 0 6px 20px;
+      position: relative;
+    }
+    .section-block ul li::before {
+      content: '✓';
+      color: #4ECBA0;
+      position: absolute;
+      left: 0;
+      font-weight: 800;
+    }
+
+    /* Third-party cards */
+    .third-party-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 12px;
+      margin-top: 14px;
+    }
+    .tp-card {
+      background: rgba(255,255,255,0.06);
+      border-radius: 12px;
+      padding: 16px;
+    }
+    .tp-card .tp-name {
+      font-weight: 800;
+      font-size: 0.9rem;
+      color: #fff;
+      margin-bottom: 6px;
+    }
+    .tp-card p {
+      font-size: 0.82rem;
+      color: #aaa;
+      line-height: 1.6;
+      margin: 0;
+    }
+
+    /* Highlight box */
+    .highlight-box {
+      background: rgba(233,69,96,0.1);
+      border: 1px solid rgba(233,69,96,0.25);
+      border-radius: 12px;
+      padding: 16px 18px;
+      margin-top: 12px;
+    }
+    .highlight-box p {
+      color: #FFB3C0 !important;
+      font-size: 0.875rem !important;
+      margin: 0 !important;
+    }
+
+    /* FOOTER */
+    footer {
+      background: #0F0F1A;
+      text-align: center;
+      padding: 36px 24px;
+      color: #888;
+      font-size: 0.85rem;
+      line-height: 1.8;
+    }
+    footer a { color: #E94560; text-decoration: none; }
+
+    @media (max-width: 480px) {
+      nav { padding: 16px 20px; }
+      .policy-hero { padding: 48px 20px 36px; }
+      .policy-hero h1 { font-size: 1.7rem; }
+      .section-block { padding: 20px 18px; }
+      .third-party-grid { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- NAV -->
+  <nav>
+    <a class="nav-logo" href="/">KidLearn</a>
+    <a class="nav-back" href="/">← Back to Home</a>
+  </nav>
+
+  <!-- HERO -->
+  <div class="policy-hero">
+    <span class="shield">🛡️</span>
+    <h1>Privacy <span>Policy</span></h1>
+    <p style="color:#CCCCCC; font-size:1rem; max-width:480px; margin:10px auto 0; line-height:1.6;">
+      We are committed to protecting the privacy of children and their families.
+    </p>
+    <p class="updated">Last updated: April 21, 2026</p>
+  </div>
+
+  <!-- CONTENT -->
+  <div class="content">
+
+    <!-- 1. Introduction -->
+    <div class="section-block">
+      <h2><span class="num">1</span> Introduction</h2>
+      <p>KidLearn ("we", "our", or "us") is an educational app designed for children ages 3–7. We are committed to protecting the privacy of children and their families. This Privacy Policy explains what information we collect, how we use it, and your rights as a parent or guardian.</p>
+    </div>
+
+    <!-- 2. Information We Collect -->
+    <div class="section-block">
+      <h2><span class="num">2</span> Information We Collect</h2>
+      <p>We do not collect any personally identifiable information from children. KidLearn does not require account registration, login, or any personal details to use the app. All learning progress and star rewards are stored locally on your device only and are never transmitted to us.</p>
+      <p>The app uses the following third-party services that may collect limited, non-personal technical data:</p>
+      <div class="third-party-grid">
+        <div class="tp-card">
+          <div class="tp-name">🔥 Firebase Analytics</div>
+          <p>Collects anonymised usage statistics (e.g. app sessions). No personal data or child information is collected. Used solely to improve app performance.</p>
+        </div>
+        <div class="tp-card">
+          <div class="tp-name">💥 Firebase Crashlytics</div>
+          <p>Automatically reports technical crash information to help us fix bugs. No personal or identifying information is included in crash reports.</p>
+        </div>
+        <div class="tp-card">
+          <div class="tp-name">📢 Google AdMob</div>
+          <p>Displays ads to support free access to the app. All ads are served in non-personalised mode in compliance with COPPA and GDPR. AdMob does not use personal data to target ads.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- 3. COPPA -->
+    <div class="section-block">
+      <h2><span class="num">3</span> Children's Privacy (COPPA Compliance)</h2>
+      <p>KidLearn is designed for children under 13. We comply fully with the Children's Online Privacy Protection Act (COPPA):</p>
+      <ul>
+        <li>We do not knowingly collect personal information from children under 13</li>
+        <li>We do not allow children to share personal information within the app</li>
+        <li>There is no chat, social feature, or external link accessible to children</li>
+        <li>All ads shown are family-safe and non-personalised</li>
+      </ul>
+      <div class="highlight-box">
+        <p>If you believe your child has provided personal information, please contact us at <strong>tuspal@gmail.com</strong> and we will delete it immediately.</p>
+      </div>
+    </div>
+
+    <!-- 4. Data Storage -->
+    <div class="section-block">
+      <h2><span class="num">4</span> Data Storage</h2>
+      <p>All app data (progress, stars, profiles) is stored locally on the device using encrypted local storage. We have no access to this data. Uninstalling the app removes all locally stored data.</p>
+    </div>
+
+    <!-- 5. Third-Party Links -->
+    <div class="section-block">
+      <h2><span class="num">5</span> Third-Party Links</h2>
+      <p>KidLearn does not contain any links to external websites or third-party services accessible to children during gameplay.</p>
+    </div>
+
+    <!-- 6. Parents & Guardians -->
+    <div class="section-block">
+      <h2><span class="num">6</span> Parents and Guardians</h2>
+      <p>We encourage parents to supervise their child's use of the app. As a parent or guardian you have the right to:</p>
+      <ul>
+        <li>Review any data associated with your child</li>
+        <li>Request deletion of any data</li>
+        <li>Opt out of analytics by contacting us</li>
+      </ul>
+      <p style="margin-top:12px">The in-app Parent Dashboard lets you monitor your child's progress, total stars earned, and activities completed at any time.</p>
+    </div>
+
+    <!-- 7. Changes -->
+    <div class="section-block">
+      <h2><span class="num">7</span> Changes to This Policy</h2>
+      <p>We may update this Privacy Policy from time to time. Any changes will be posted on this page with an updated date. Continued use of the app after changes constitutes acceptance of the updated policy.</p>
+      <p style="margin-top:10px; color:#888; font-size:0.85rem;">Developer: Kid Studio Kol &nbsp;·&nbsp; Contact: <a href="mailto:tuspal@gmail.com" style="color:#E94560;">tuspal@gmail.com</a></p>
+    </div>
+
+  </div>
+
+  <!-- FOOTER -->
+  <footer>
+    <p>© 2026 Kid Studio · KidLearn App</p>
+    <p style="margin-top:8px">
+      <a href="mailto:tuspal@gmail.com">Contact Us</a>
+      &nbsp;·&nbsp;
+      <a href="/privacy.html">Privacy Policy</a>
+      &nbsp;·&nbsp;
+      <a href="https://play.google.com/store/apps/details?id=com.kidstudio.kidlearn" target="_blank">Google Play</a>
+    </p>
+    <p style="margin-top:8px; font-size:0.75rem; color:#555">
+      Designed with ❤️ for curious little minds.
+    </p>
+  </footer>
+
+</body>
+</html>
