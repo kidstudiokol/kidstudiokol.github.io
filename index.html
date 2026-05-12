@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>KidLearn — Bold Adventure Learning for Kids</title>
+  <meta name="description" content="KidLearn is a fun, interactive learning app for kids ages 3–7. Explore Letters, Sizes, Numbers, Puzzles, and Science worlds!" />
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: #1A1A2E;
+      color: #fff;
+      min-height: 100vh;
+    }
+
+    /* NAV */
+    nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 20px 40px;
+      background: rgba(255,255,255,0.04);
+      backdrop-filter: blur(8px);
+      position: sticky;
+      top: 0;
+      z-index: 100;
+    }
+    .nav-logo { font-size: 1.5rem; font-weight: 800; color: #E94560; letter-spacing: 1px; }
+    .nav-badge {
+      background: #E94560;
+      color: #fff;
+      padding: 8px 20px;
+      border-radius: 24px;
+      font-weight: 700;
+      font-size: 0.9rem;
+      text-decoration: none;
+    }
+
+    /* HERO */
+    .hero {
+      text-align: center;
+      padding: 80px 24px 60px;
+      background: radial-gradient(ellipse at 50% 0%, #533483 0%, #1A1A2E 70%);
+    }
+    .hero-emoji { font-size: 5rem; display: block; margin-bottom: 16px; }
+    .hero h1 {
+      font-size: clamp(2.4rem, 6vw, 4rem);
+      font-weight: 900;
+      line-height: 1.15;
+      margin-bottom: 16px;
+    }
+    .hero h1 span { color: #E94560; }
+    .hero p {
+      font-size: 1.15rem;
+      color: #CCCCCC;
+      max-width: 520px;
+      margin: 0 auto 36px;
+      line-height: 1.7;
+    }
+    .hero-cta {
+      display: inline-block;
+      background: #E94560;
+      color: #fff;
+      text-decoration: none;
+      padding: 16px 40px;
+      border-radius: 32px;
+      font-size: 1.1rem;
+      font-weight: 800;
+      letter-spacing: 0.5px;
+      transition: transform 0.15s, box-shadow 0.15s;
+      box-shadow: 0 8px 30px rgba(233,69,96,0.45);
+    }
+    .hero-cta:hover { transform: translateY(-2px); box-shadow: 0 12px 36px rgba(233,69,96,0.55); }
+    .hero-sub { display: block; margin-top: 14px; font-size: 0.85rem; color: #888; }
+
+    /* WORLDS */
+    .section { padding: 64px 24px; max-width: 900px; margin: 0 auto; }
+    .section-title {
+      text-align: center;
+      font-size: 1.9rem;
+      font-weight: 800;
+      margin-bottom: 36px;
+    }
+    .worlds-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+      gap: 16px;
+    }
+    .world-card {
+      border-radius: 20px;
+      padding: 28px 16px;
+      text-align: center;
+      transition: transform 0.2s;
+    }
+    .world-card:hover { transform: translateY(-4px); }
+    .world-card .w-emoji { font-size: 2.8rem; display: block; margin-bottom: 10px; }
+    .world-card .w-name { font-weight: 800; font-size: 1rem; }
+    .world-card .w-desc { font-size: 0.8rem; opacity: 0.75; margin-top: 4px; }
+
+    .w-letters  { background: linear-gradient(145deg, #E94560, #b03050); }
+    .w-sizes    { background: linear-gradient(145deg, #0F3460, #1a5ca0); }
+    .w-numbers  { background: linear-gradient(145deg, #533483, #8044cc); }
+    .w-puzzles  { background: linear-gradient(145deg, #0A7A6A, #0fb89c); }
+    .w-science  { background: linear-gradient(145deg, #7A4500, #c47000); }
+
+    /* FEATURES */
+    .features-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      gap: 20px;
+    }
+    .feature-card {
+      background: rgba(255,255,255,0.05);
+      border: 1px solid rgba(255,255,255,0.08);
+      border-radius: 18px;
+      padding: 28px 24px;
+    }
+    .feature-card .f-icon { font-size: 2rem; margin-bottom: 12px; display: block; }
+    .feature-card h3 { font-size: 1rem; font-weight: 800; margin-bottom: 6px; }
+    .feature-card p { font-size: 0.875rem; color: #CCCCCC; line-height: 1.6; }
+
+    /* SCREENSHOTS placeholder */
+    .screens-row {
+      display: flex;
+      gap: 16px;
+      justify-content: center;
+      flex-wrap: wrap;
+      padding: 0 24px 64px;
+    }
+    .screen-mock {
+      width: 140px;
+      height: 240px;
+      border-radius: 18px;
+      background: #0F3460;
+      border: 2px solid rgba(255,255,255,0.1);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 2.5rem;
+    }
+
+    /* FOOTER */
+    footer {
+      background: #0F0F1A;
+      text-align: center;
+      padding: 36px 24px;
+      color: #888;
+      font-size: 0.85rem;
+      line-height: 1.8;
+    }
+    footer a { color: #E94560; text-decoration: none; }
+
+    @media (max-width: 480px) {
+      nav { padding: 16px 20px; }
+      .hero { padding: 60px 20px 48px; }
+      .worlds-grid { grid-template-columns: repeat(3, 1fr); gap: 10px; }
+      .world-card { padding: 20px 8px; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- NAV -->
+  <nav>
+    <span class="nav-logo">KidLearn</span>
+    <a class="nav-badge" href="https://play.google.com/store/apps/details?id=com.kidstudio.kidlearn" target="_blank">
+      ▶ Get on Play Store
+    </a>
+  </nav>
+
+  <!-- HERO -->
+  <section class="hero">
+    <span class="hero-emoji">🚀</span>
+    <h1>Learning is a<br/><span>Bold Adventure!</span></h1>
+    <p>KidLearn makes early education irresistible for children ages 3–7 through colourful worlds, games, and a friendly voice guide.</p>
+    <a class="hero-cta" href="https://play.google.com/store/apps/details?id=com.kidstudio.kidlearn" target="_blank">
+      Download Free on Android
+    </a>
+    <span class="hero-sub">No subscriptions · No in-app purchases · Works offline</span>
+  </section>
+
+  <!-- WORLDS -->
+  <div class="section">
+    <h2 class="section-title">5 Learning Worlds to Explore</h2>
+    <div class="worlds-grid">
+      <div class="world-card w-letters">
+        <span class="w-emoji">🔤</span>
+        <div class="w-name">Letters</div>
+        <div class="w-desc">A–Z matching &amp; tracing</div>
+      </div>
+      <div class="world-card w-sizes">
+        <span class="w-emoji">📐</span>
+        <div class="w-name">Sizes</div>
+        <div class="w-desc">Big, small, tall &amp; short</div>
+      </div>
+      <div class="world-card w-numbers">
+        <span class="w-emoji">🔢</span>
+        <div class="w-name">Numbers</div>
+        <div class="w-desc">Count &amp; number match</div>
+      </div>
+      <div class="world-card w-puzzles">
+        <span class="w-emoji">🧩</span>
+        <div class="w-name">Puzzles</div>
+        <div class="w-desc">Shapes, colours &amp; jigsaws</div>
+      </div>
+      <div class="world-card w-science">
+        <span class="w-emoji">🔬</span>
+        <div class="w-name">Science</div>
+        <div class="w-desc">Mix, sort &amp; discover</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- FEATURES -->
+  <div class="section" style="padding-top:0">
+    <h2 class="section-title">Why Kids Love KidLearn</h2>
+    <div class="features-grid">
+      <div class="feature-card">
+        <span class="f-icon">🎙️</span>
+        <h3>Voice Guide</h3>
+        <p>A friendly instructor voice reads every question aloud — no reading skills required.</p>
+      </div>
+      <div class="feature-card">
+        <span class="f-icon">⭐</span>
+        <h3>Star Rewards</h3>
+        <p>Earn 1–3 stars per activity. Collect enough to unlock secret worlds!</p>
+      </div>
+      <div class="feature-card">
+        <span class="f-icon">📵</span>
+        <h3>Fully Offline</h3>
+        <p>All content is built in. No internet needed — safe on long car rides.</p>
+      </div>
+      <div class="feature-card">
+        <span class="f-icon">👨‍👩‍👧</span>
+        <h3>Parent Dashboard</h3>
+        <p>Check your child's progress, total stars, and activities completed anytime.</p>
+      </div>
+      <div class="feature-card">
+        <span class="f-icon">🎨</span>
+        <h3>Vivid Design</h3>
+        <p>Bold, high-contrast colours with large tap targets — built for little fingers.</p>
+      </div>
+      <div class="feature-card">
+        <span class="f-icon">🆓</span>
+        <h3>Free to Play</h3>
+        <p>Core worlds are free. No paywalls, no subscriptions, no surprise charges.</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- FOOTER -->
+  <footer>
+    <p>© 2026 Kid Studio · KidLearn App</p>
+    <p style="margin-top:8px">
+      <a href="mailto:tuspal@gmail.com">Contact Us</a>
+      &nbsp;·&nbsp;
+      <a href="/privacy.html">Privacy Policy</a>
+      &nbsp;·&nbsp;
+      <a href="https://play.google.com/store/apps/details?id=com.kidstudio.kidlearn" target="_blank">Google Play</a>
+    </p>
+    <p style="margin-top:8px; font-size:0.75rem; color:#555">
+      Designed with ❤️ for curious little minds.
+    </p>
+  </footer>
+
+</body>
+</html>
